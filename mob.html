@@ -333,6 +333,10 @@
       
       $(".regular").slick({
         dots: true,
+	      customPaging : function(slider, i) {
+    var thumb = $(slider.$slides[i]).data();
+    return '<a class="dot">'+i+'</a>';
+            },
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1
